@@ -223,7 +223,8 @@ export default class TemplateRenderer {
 
   renderScripts (context: Object): string {
     const shouldRenderAsyncScripts = this.options.shouldRenderAsyncScripts !== false
-
+    console.log('shouldRenderAsyncScripts', shouldRenderAsyncScripts)
+    
     if (this.clientManifest) {
       const initial = this.preloadFiles.filter(({ file }) => isJS(file))
       const async = ((shouldRenderAsyncScripts && this.getUsedAsyncFiles(context)) || []).filter(({ file }) => isJS(file))

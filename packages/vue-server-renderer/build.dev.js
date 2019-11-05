@@ -9013,7 +9013,8 @@ TemplateRenderer.prototype.renderScripts = function renderScripts (context) {
     var this$1 = this;
 
   var shouldRenderAsyncScripts = this.options.shouldRenderAsyncScripts !== false;
-
+  console.log('shouldRenderAsyncScripts', shouldRenderAsyncScripts);
+    
   if (this.clientManifest) {
     var initial = this.preloadFiles.filter(function (ref) {
         var file = ref.file;
